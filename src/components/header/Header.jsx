@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import "./Header.css";
 
 const Header = () => {
+  //Change Backgrond Header
+  const ScrollUp = () => {
+    window.addEventListener("scroll", function () {
+      const scrollUp = document.querySelector(".scrollup");
+      if (this.scrollY >= 560) {
+        scrollUp.classList.add("show-scroll");
+      } else {
+        scrollUp.classList.remove("show-scroll");
+      }
+    });
   // Toggle Menu
   const [toggle, showMenu] = useState(false);
   return (
